@@ -270,6 +270,7 @@ function draw_letter(letter, letter_number, t, position, color) {
                         _scale: [box_size, box_size, 0.5],
                         _position: [j * box_size + letter_size * letter_number, -i * box_size, 0],
                         _animation: {
+                        // here we make the animation for how the cubes are gonna be assembled into letters
                             _definitePosition: [[Random(-15, 15), Random(10, 20), Random(0, 0), 0], [x, y, z, 0.1], [x, y, z, 0.7], [Random(-15, 15), Random(10, 20), Random(0, 0), 1]],
                             _dissolve: [[0, 0], [1, 0.1], [0, 0.999]]
 
@@ -291,5 +292,17 @@ function draw_sentence(text, position, time, color) {
     }
 }
 
-draw_sentence("I WAS CALLING TO SAY", [0, 1015, 40], 91, [1, 1, 1])
-draw_sentence("I...", [0, 1007, 40], 93, [1, 1, 1])
+color_white= [1, 1, 1]
+
+position_1= [0, 1015, 40]
+position_2= [0, 1007, 40]
+
+time_1=91
+time_2=93
+
+draw_sentence("Write text here", position_1, time_1, color_white)
+draw_sentence("Write some other text here", position_2, time_2, color_white)
+
+
+// the script could look like this
+draw_sentence("blackbetty bambelam", [0, 1007, 40], 87, [1, 1, 1])
